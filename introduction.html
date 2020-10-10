@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn how to easily perform binary addition, multiplication, subtraction and division. Includes interactive examples.">
+    <meta name="keywords" content="binary addition, binary multiplication, binary subtraction, binary division, binary arithmetic, binary">
+    <meta name="author" content="Ryan Chadwick">
+
+    <title>Binary Arithmetic calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="intrduction1.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="introduction2.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="introduction3.css" rel="stylesheet">
+    <link href="introduction4.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="/favicons/favicon_binary.png">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script charset="utf-8" src="introduction.js"></script>
+</head>
+
+<body role="document" data-spy="scroll" data-target="#sidebox" data-offset="90" style="">
+    <!--<header id="ryansheader">
+         <div class="container">
+            <div class="col-sm-12">
+                <a id="ryantitle" href="/" title="A collection of Technology Tutorials">Ryans Tutorials</a>
+
+                <div class="btn-toolbar pull-right">
+                    <div class="btn-group mega-dropdown">
+                        <button class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown">More Tutorials <span class="caret"></span></button>
+                        <ul class="dropdown-menu pull-right mega-dropdown-menu row">
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">Linux</li>
+                                    <li><a href="/linuxtutorial/"><span><img src="/img/round/tux_48.png" alt="Tux"><p>Linux Tutorial</p></span></a></li>
+                                    <li><a href="/bash-scripting-tutorial/"><span><img src="/img/round/hammer_48.png" alt="Hammer"><p>Bash Scripting Tutorial</p></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">Web</li>
+                                    <li><a href="/html-tutorial/"><span><img src="/img/round/html_48.png" alt="HTML"><p>HTML Tutorial</p></span></a></li>
+                                    <li><a href="/css-tutorial/"><span><img src="/img/round/css_48.png" alt="CSS"><p>CSS Tutorial</p></span></a></li>
+                                    <li><a href="/website-development-challenges/"><span><img src="/img/round/experiment_48.png" alt="Experiment"><p>Website Development Challenges</p></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">General</li>
+                                    <li><a href="/binary-tutorial/"><span><img src="/img/round/abacus_48.png" alt="Abacus"><p>Binary Tutorial</p></span></a></li>
+                                    <li><a href="/regular-expressions-tutorial/"><span><img src="/img/round/search_48.png" alt="Search"><p>Regular Expressions Tutorial</p></span></a></li>
+                                    <li><a href="/boolean-algebra-tutorial/"><span><img src="/img/round/config_48.png" alt="Switches"><p>Boolean Algebra Tutorial</p></span></a></li>
+                                    <li><a href="/rubiks-cube-tutorial/"><span><img src="/img/round/cube_48.png" alt="Rubiks Cube"><p>Solve the Cube</p></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">&nbsp;</li>
+                                    <li><a href="/problem-solving-skills/"><span><img src="/img/round/map_48.png" alt="Map"><p>Problem Solving Skills</p></span></a></li>
+                                    <li><a href="/graphic-design-tutorial/"><span><img src="/img/round/brush_48.png" alt="Brush"><p>Basic Graphic Design</p></span></a></li>
+                                    <li><a href="/programming-challenges/"><span><img src="/img/round/rocket_48.png" alt="Rocket"><p>Programming Challenges</p></span></a></li>
+                                    <li><a href="/software-design-and-development/"><span><img src="/img/round/browser_48.png" alt="Software"><p>Software Design and Development</p></span></a></li>
+                                    <li><a href="/microbit-tutorial/"><span><img src="/img/round/microbit_48.png" alt="micro:bit"><p>micro:bit tutorial</p></span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>-->
+
+    <!-- Fixed navbar -->
+    <div id="tutorialheader" class="navbar navbar-inverse navbar-static affix-top" role="navigation" data-spy="affix" data-offset-top="40">
+        <div class="container">
+
+            <ul class="nav nav-list">
+                <li class="my_bar"><a class="my_bar" href="#introduction">Introduction</a></li>
+                <li class="my_bar"><a class="my_bar" href="#addition">Binary Addition</a></li>
+                <li class="my_bar"><a class="my_bar" href="#multiplication">Binary Multiplication</a></li>
+                <li class="my_bar"><a class="my_bar" href="#subtraction">Binary Subtraction</a></li>
+                <li class="my_bar"><a class="my_bar" href="#division">Binary Division</a></li>
+                <li class="my_bar"><a class="my_bar" href="#activities">Practice</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="my_ktitle">Binary Arithmetic</div>
+            <div class="col-md-9">
+
+
+                <h2 id="introduction" class="introduction">Introduction</h2>
+
+                <div class="pull-right">
+                    <style>
+                        .ryanstutorials-binary-top {
+                            width: 300px;
+                            height: 250px;
+                        }
+                        
+                        @media(min-width: 500px) {
+                            .ryanstutorials-binary-top {
+                                width: 336px;
+                                height: 280px;
+                            }
+                        }
+                        
+                        @media(min-width: 800px) {
+                            .ryanstutorials-binary-top {
+                                width: 336px;
+                                height: 280px;
+                            }
+                        }
+                    </style>
+                    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+                    <script async="" src="introduction2.js"></script>
+                    <!-- RyansTutorials Binary Top -->
+                    <ins class="adsbygoogle ryanstutorials-binary-top" style="display:inline-block" data-ad-client="ca-pub-9971420945046594" data-ad-slot="3575700871"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <div class="section1">
+                    <p>In this final section of the Binary Tutorial you will learn how to easily perform binary arithmetic (addition, subtraction, multiplication and division) by hand. Binary arithmetic is one of those skills which you probably won't use
+                        very often. It can be very useful to know however. These processes are often stepping stones to more complex processes which can do very powerful things. Fortunately, they are not too difficult so with a bit of practice you'll
+                        be off and running in no time. There are many calculators now which can do binary arithmetic for you. Just about every desktop OS, smart phone and tablet has one built in or one can easily be aquired. It is perfectly fine to use
+                        the calculator but we should know how to do it by hand as well. This will give us a much better understanding as to what is actually happening. That understanding is important in order to understand how certain mechanisms work
+                        (especially in computing). My recommnedation is to practice on paper by hand but use the calculator to verify your working.
+                    </p>
+                </div>
+                <hr>
+                <h2 id="addition">Binary Addition</h2>
+                <div class="section1">
+                    <p>Binary addition is the easiest of the processes to perform. As you'll see with the other operations below, it is essentially the same way you learnt to do addition of decimal numbers by hand (probably many years ago in your early school
+                        years). The process is actually easier with binary as we only have 2 digits to worry about, 0 and 1.</p>
+
+                    <p>The process is that we line the two numbers up (one under the other), then, starting at the far right, add each column, recording the result and possible carry as we go.</p>
+
+                    <p>Here are the possibilities:</p>
+
+                    <ul>
+                        <li>0 + 0 = 0</li>
+                        <li>1 + 0 = 1</li>
+                        <li>1 + 1 = 2 which is 10 in binary which is 0 with a carry of 1</li>
+                        <li>1 + 1 + 1 (carry) = 3 which is 11 in binary which is 1 with a carry of 1</li>
+                    </ul>
+
+                    <p>The carry is involved whenever we have a result larger than 1 (which is the largest amount we may represent with a single binary digit).</p>
+
+                    <p>Learn step by step from examples</p>
+
+                    <div class="black_beauty">
+                        <div id="additioncontrols">
+                            <input type="button" value="New Example" id="additiongenerate">
+                            <input type="button" value="Next Step" id="additionnextstep">
+                            <input type="button" value="Start Again" id="additionstartover">
+                        </div>
+                        <div id="additionwrapper">
+
+                            <div id="additionworking" class="workingarea">
+                                <div id="additiontoprow" class="workingrow">
+                                    <div id="additiontoprow5" class="colour5" title="2^4 : 16">1</div>
+                                    <div id="additiontoprow4" class="colour4" title="2^3 : 8">0</div>
+                                    <div id="additiontoprow3" class="colour3" title="2^2 : 4">0</div>
+                                    <div id="additiontoprow2" class="colour2" title="2^1 : 2">0</div>
+                                    <div id="additiontoprow1" class="colour1" title="2^0 : 1">1</div>
+                                    <div class="decimal">17</div>
+                                </div>
+                                <div id="additionsecondrow" class="workingrow">
+                                    <div id="additionsecondrow5" class="colour5" title="2^4 : 16">&nbsp;</div>
+                                    <div id="additionsecondrow4" class="colour4" title="2^3 : 8">1</div>
+                                    <div id="additionsecondrow3" class="colour3" title="2^2 : 4">1</div>
+                                    <div id="additionsecondrow2" class="colour2" title="2^1 : 2">0</div>
+                                    <div id="additionsecondrow1" class="colour1" title="2^0 : 1">0</div>
+                                    <div class="decimal">12</div>
+                                </div>
+                                <div id="additioncarryrow" class="workingrow">
+                                    <div id="additioncarryrow6">&nbsp;</div>
+                                    <div id="additioncarryrow5">&nbsp;</div>
+                                    <div id="additioncarryrow4">&nbsp;</div>
+                                    <div id="additioncarryrow3">&nbsp;</div>
+                                    <div id="additioncarryrow2">&nbsp;</div>
+                                    <div id="additioncarryrow1">&nbsp;</div>
+                                </div>
+                                <div id="additionanswerrow" class="workingrow">
+                                    <div id="additionanswerrow6" title="2^5 : 32">&nbsp;</div>
+                                    <div id="additionanswerrow5" class="colour5" title="2^4 : 16">&nbsp;</div>
+                                    <div id="additionanswerrow4" class="colour4" title="2^3 : 8">&nbsp;</div>
+                                    <div id="additionanswerrow3" class="colour3" title="2^2 : 4">&nbsp;</div>
+                                    <div id="additionanswerrow2" class="colour2" title="2^1 : 2">&nbsp;</div>
+                                    <div id="additionanswerrow1" class="colour1" title="2^0 : 1">&nbsp;</div>
+                                    <div class="decimal"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <h3>Adding more than two numbers</h3>
+
+                    <p>It is possible to add more than 2 binary numbers in one go but it can soon get unweildly managing the carries. My suggestion is that you add the 1st and 2nd numbers together. Then take the result and add the third number to that. Then
+                        take the result and add the 4th etc. This way you may add as many binary numbers as you like and the complexity will never increase. It's a little more work but with practice you will get very quick at it.</p>
+
+                </div>
+                <hr>
+                <h2 id="multiplication">Binary Multiplication</h2>
+                <div class="section1">
+                    <p>Binary multiplication is just about as easy as binary addition. Again it is the same process as we would do with decimal multiplication by hand. Again it is easier as binary only has 0 and 1.</p>
+
+                    <p>We line the two numbers up (similar to addition). Then we multiply the entire top number by each individual digit of the bottom number. As we move across each digit we pad out the result with 0's to line it up. Finally we add all the
+                        results together.
+                    </p>
+
+                    <p>Here are the possibilities:</p>
+
+                    <ul>
+                        <li>0 * 0 = 0</li>
+                        <li>1 * 0 = 0</li>
+                        <li>1 * 1 = 1</li>
+                    </ul>
+
+
+
+                    <p>Learn step by step from examples</p>
+
+                    <div class="black_beauty">
+                        <div id="multiplicationcontrols">
+                            <input type="button" value="Generate new example" id="multiplicationgenerate">
+                            <input type="button" value="Next Step" id="multiplicationnextstep">
+                            <input type="button" value="Start Over" id="multiplicationstartover">
+                        </div>
+
+
+                        <div id="multiplicationwrapper">
+                            <div id="multiplicationworking" class="workingarea">
+                                <div id="multiplicationtoprow" class="workingrow">
+                                    <div id="multiplicationtoprow5" class="colour5">1</div>
+                                    <div id="multiplicationtoprow4" class="colour4">1</div>
+                                    <div id="multiplicationtoprow3" class="colour3">0</div>
+                                    <div id="multiplicationtoprow2" class="colour2">0</div>
+                                    <div id="multiplicationtoprow1" class="colour1">1</div>
+                                    <div class="decimal">25</div>
+                                </div>
+                                <div id="multiplicationsecondrow" class="workingrow">
+                                    <div id="multiplicationsecondrow3">1</div>
+                                    <div id="multiplicationsecondrow2">0</div>
+                                    <div id="multiplicationsecondrow1">1</div>
+                                    <div class="decimal">5</div>
+                                </div>
+                                <div id="multiplicationanswerrow1" class="workingrow">
+                                    <div id="multiplication1answerrow5" class="colour5">&nbsp;</div>
+                                    <div id="multiplication1answerrow4" class="colour4">&nbsp;</div>
+                                    <div id="multiplication1answerrow3" class="colour3">&nbsp;</div>
+                                    <div id="multiplication1answerrow2" class="colour2">&nbsp;</div>
+                                    <div id="multiplication1answerrow1" class="colour1">&nbsp;</div>
+                                    <div class="decimal"></div>
+                                </div>
+                                <div id="multiplicationanswerrow2" class="workingrow">
+                                    <div id="multiplication2answerrow5" class="colour5">&nbsp;</div>
+                                    <div id="multiplication2answerrow4" class="colour4">&nbsp;</div>
+                                    <div id="multiplication2answerrow3" class="colour3">&nbsp;</div>
+                                    <div id="multiplication2answerrow2" class="colour2">&nbsp;</div>
+                                    <div id="multiplication2answerrow1" class="colour1">&nbsp;</div>
+                                    <div id="multiplication2answerrow0">&nbsp;</div>
+                                    <div class="decimal"></div>
+                                </div>
+                                <div id="multiplicationanswerrow3" class="workingrow">
+                                    <div id="multiplication3answerrow5" class="colour5">&nbsp;</div>
+                                    <div id="multiplication3answerrow4" class="colour4">&nbsp;</div>
+                                    <div id="multiplication3answerrow3" class="colour3">&nbsp;</div>
+                                    <div id="multiplication3answerrow2" class="colour2">&nbsp;</div>
+                                    <div id="multiplication3answerrow1" class="colour1">&nbsp;</div>
+                                    <div id="multiplication3answerrow01">&nbsp;</div>
+                                    <div id="multiplication3answerrow02">&nbsp;</div>
+                                    <div class="decimal"></div>
+                                </div>
+                                <div id="multiplicationtotalrow" class="workingrow">
+                                    <div id="multiplicationtotalrow8">&nbsp;</div>
+                                    <div id="multiplicationtotalrow7">&nbsp;</div>
+                                    <div id="multiplicationtotalrow6">&nbsp;</div>
+                                    <div id="multiplicationtotalrow5">&nbsp;</div>
+                                    <div id="multiplicationtotalrow4">&nbsp;</div>
+                                    <div id="multiplicationtotalrow3">&nbsp;</div>
+                                    <div id="multiplicationtotalrow2">&nbsp;</div>
+                                    <div id="multiplicationtotalrow1">&nbsp;</div>
+                                    <div class="decimal"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>As you may have noticed, the process is fairly straight forward. If the binary digit on the second row we are multiplying by is a 1 then pad out accordingly and write out the top binary number. If the binary digit on the second row
+                        we are multiplying by is a 0 then we can just write out 0's.</p>
+
+                    <div class="shortcut">
+                        <p>If we want to multiply a binary number by another number which is a power of 2 then all we need to do is add the number of 0's representing that power to the right of the first number.</p>
+
+                        <p>eg. 8 is 2<sup>3</sup> which is 1000 in binary.</p>
+
+                        <p><b>101101</b> x 1000 = <b>101101</b>000</p>
+
+                    </div>
+
+                    <div class="block-center">
+                        <style>
+                            .ryanstutorials-binary-middle {
+                                width: 320px;
+                                height: 50px;
+                            }
+                            
+                            @media(min-width: 500px) {
+                                .ryanstutorials-binary-middle {
+                                    width: 468px;
+                                    height: 60px;
+                                }
+                            }
+                            
+                            @media(min-width: 750px) {
+                                .ryanstutorials-binary-middle {
+                                    width: 728px;
+                                    height: 90px;
+                                }
+                            }
+                        </style>
+                        <script async="" src="introduction3.js"></script>
+                        <!-- RyansTutorials Binary Middle -->
+                        <ins class="adsbygoogle ryanstutorials-binary-middle" style="display:inline-block" data-ad-client="ca-pub-9971420945046594" data-ad-slot="6529167278"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+                <hr>
+                <h2 id="subtraction">Binary Subtraction</h2>
+                <div class="section1">
+                    <p>With binary subtraction we start to get a little more difficult (But not that difficult). Similar to binary addition, we will work through the numbers, column by column, starting on the far right. Instead of carrying forward however,
+                        we will borrow backwards (when necessary).</p>
+
+                    <p>Here are the possibilities:</p>
+
+                    <ul>
+                        <li>0 - 0 = 0</li>
+                        <li>1 - 0 = 1</li>
+                        <li>1 - 1 = 0</li>
+                        <li>0 - 1 = we can't do so we borrow 1 from the next column. This makes it 10 - 1 which is 1.</li>
+                    </ul>
+
+                    <p>Learn step by step from examples</p>
+                    <div class="black_beauty">
+                        <div id="subtractioncontrols">
+                            <input type="button" value="Generate new example" id="subtractiongenerate">
+                            <input type="button" value="Next Step" id="subtractionnextstep">
+                            <input type="button" value="Start Over" id="subtractionstartover">
+                        </div>
+
+                        <div id="subtractionwrapper">
+                            <div id="subtractionworking" class="workingarea">
+                                <div id="subtractioncarry2row" class="workingrow">
+                                    <div id="subtractioncarry2row5" class="colour5">&nbsp;</div>
+                                    <div id="subtractioncarry2row4" class="colour4">&nbsp;</div>
+                                    <div id="subtractioncarry2row3" class="colour3">&nbsp;</div>
+                                    <div id="subtractioncarry2row2" class="colour2">&nbsp;</div>
+                                    <div id="subtractioncarry2row1" class="colour1">&nbsp;</div>
+                                </div>
+                                <div id="subtractioncarry1row" class="workingrow">
+                                    <div id="subtractioncarry1row5" class="colour5">&nbsp;</div>
+                                    <div id="subtractioncarry1row4" class="colour4">&nbsp;</div>
+                                    <div id="subtractioncarry1row3" class="colour3">&nbsp;</div>
+                                    <div id="subtractioncarry1row2" class="colour2">&nbsp;</div>
+                                    <div id="subtractioncarry1row1" class="colour1">&nbsp;</div>
+                                </div>
+                                <div id="subtractiontoprow" class="workingrow">
+                                    <div id="subtractiontoprow5" class="colour5">1</div>
+                                    <div id="subtractiontoprow4" class="colour4">0</div>
+                                    <div id="subtractiontoprow3" class="colour3">0</div>
+                                    <div id="subtractiontoprow2" class="colour2">1</div>
+                                    <div id="subtractiontoprow1" class="colour1">1</div>
+                                    <div class="decimal">19</div>
+                                </div>
+                                <div id="subtractionsecondrow" class="workingrow">
+                                    <div id="subtractionsecondrow4" class="colour4">1</div>
+                                    <div id="subtractionsecondrow3" class="colour3">0</div>
+                                    <div id="subtractionsecondrow2" class="colour2">1</div>
+                                    <div id="subtractionsecondrow1" class="colour1">1</div>
+                                    <div class="decimal">11</div>
+                                </div>
+                                <div id="subtractionanswerrow" class="workingrow">
+                                    <div id="subtractionanswerrow5" class="colour5">&nbsp;</div>
+                                    <div id="subtractionanswerrow4" class="colour4">&nbsp;</div>
+                                    <div id="subtractionanswerrow3" class="colour3">&nbsp;</div>
+                                    <div id="subtractionanswerrow2" class="colour2">&nbsp;</div>
+                                    <div id="subtractionanswerrow1" class="colour1">&nbsp;</div>
+                                    <div class="decimal"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>If we have multiple 0's in a row on the top number and need to borrow then things get a little interesting. It follows this general process:</p>
+
+                    <p>Let's say we have 100 - 1</p>
+
+                    <ul>
+                        <li>In the first column we need to borrow a 1 but the second column is 0.</li>
+                        <li>Column 2 borrows a 1 from the third column and becomes 10 (2 in decimal)</li>
+                        <li>Now we may borrow 1 from the second column (decreasing it from 2 to 1 or from 10 to 1)</li>
+                        <li>Now column 2 is 1 and column 1 is 10 and we may continue as normal.</li>
+                    </ul>
+
+                    <p>Sometimes you may have to do this over multiple columns but the process is the same.</p>
+
+
+                    <h3>Another approach</h3>
+
+                    <p>The above example is the most convenient way for us to do binary subtraction by hand. There is another approach however and this is the way that computers subtract binary digits. This approach is called Two's Complement.</p>
+
+                    <p>Let's say we want to compute 1000 ( 8 ) - 11 ( 3 ).</p>
+
+                    <ul>
+                        <li>Step 1: Write the equation out, padding the bottom number with 0's<br>
+                            <b>1000<br>
+					0011 - </b></li>
+                        <li>Step 2: Invert the digits of the lower number<br>
+                            <b>1000<br>
+					1100</b></li>
+                        <li>Step 3: Add 1 to the lower number<br>
+                            <b>1000<br>
+					1101</b></li>
+                        <li>Step 4: Add those two numbers together to get <b>10101</b></li>
+                        <li>Step 5: Remove the leading 1 (and any 0's after it). You are left with <b>101</b> ( 5 ).</li>
+                    </ul>
+
+                    <!--<p>This can seem a little confusing but let's look at it in decimal numbers.</p>
+
+				<ul>
+					<li>Double 3 becomes 6</li>
+					<li>6 + 1 = 7</li>
+					<li>8 + 7 = 15</li>
+					<li>Remove the leading base value (in this case 10) and you are left with 5</li>
+				</ul>-->
+
+                </div>
+                <hr>
+                <h2 id="division">Binary Division</h2>
+                <div class="section1">
+                    <p>Binary division is probably the most difficult of the binary equations. Fortunately, it is also made easier by the fact we only have to deal with 1's and 0's.</p>
+
+                    <p>First off, some terminology. The number we are dividing by is the <b>divisor</b>. The number we are dividing into is the <b>dividend</b>.</p>
+
+                    <p>The process is as follows:</p>
+
+                    <ul>
+                        <li>Step 1: Create the working portion of the dividend. Starting at the right, keep including digits until we have a number that the divisor will go into.</li>
+                        <li>Step 2: Work out how many times the divisor goes into the working portion (with binary this is easy as it will always be 1). Write this number above the line (in line with the far right digit of the working number).</li>
+                        <li>Step 3: Subtract the divisor from the working number. This becomes the beginning of the new working number.</li>
+                        <li>Step 4: Bring down digits from the dividend and add to the new working number until we have a new working number large enough for the divisor to go into.</li>
+                        <li>Step 5: Repeat steps 2 to 4 until we are at the end of the dividend.</li>
+                        <li>Step 6: The result of the final subtraction is the remainder.</li>
+                    </ul>
+
+                    <p>Learn step by step from examples</p>
+                    <div class="black_beauty">
+                        <div id="divisioncontrols">
+                            <input type="button" value="Generate new example" id="divisiongenerate">
+                            <input type="button" value="Next Step" id="divisionnextstep">
+                            <input type="button" value="Start Over" id="divisionstartover">
+                        </div>
+
+                        <div id="divisionwrapper">
+                            <div id="divisionworking" class="workingarea">
+                                <div id="divisionanswerrow" class="workingrow">
+                                    <div id="divisionanswerrow4" class="colour4">&nbsp;</div>
+                                    <div id="divisionanswerrow3" class="colour3">&nbsp;</div>
+                                    <div id="divisionanswerrow2" class="colour2">&nbsp;</div>
+                                    <div id="divisionanswerrow1" class="colour1">&nbsp;</div>
+                                    <div class="rightdecimal">&nbsp;</div>
+                                </div>
+                                <div id="divisiondivisor" class="workingrow">
+                                    <div id="divisiondivisor3">1</div>
+                                    <div id="divisiondivisor2">0</div>
+                                    <div id="divisiondivisor1">0</div>
+                                    <div class="decimal">4</div>
+                                </div>
+                                <div id="divisiondividend" class="workingrow">
+                                    <div id="divisiondividend5" class="colour5">1</div>
+                                    <div id="divisiondividend4" class="colour4">0</div>
+                                    <div id="divisiondividend3" class="colour3">1</div>
+                                    <div id="divisiondividend2" class="colour2">0</div>
+                                    <div id="divisiondividend1" class="colour1">1</div>
+                                    <div class="rightdecimal">21</div>
+                                </div>
+                                <div id="divisionworkingarea"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
+                <h2 id="activities">PRACTICE</h2>
+                <div class="section1">
+                    <p>Use this section to generate questions for practice.Check if the answer is correct</p>
+                    <div class="yooo">
+                        <ul class="activities">
+                            <li><span class="questiontitle">Addition</span> <br><input type="button" value="Generate" id="questionadditiongenerate"> <span id="additionactivity" class="activityquestion"></span> <input type="button" value="Show answer" id="additionshow">                                <span id="additionanswer" class="activityanswer"></span></li>
+                            <hr>
+                            <li><span class="questiontitle">Multiplication </span> <br><input type="button" value="Generate" id="questionmultiplicationgenerate"> <span id="multiplicationactivity" class="activityquestion"></span> <input type="button" value="Show answer"
+                                    id="multiplicationshow"> <span id="multiplicationanswer" class="activityanswer"></span></li>
+                            <hr>
+                            <li><span class="questiontitle">Subtraction</span><br> <input type="button" value="Generate" id="questionsubtractiongenerate"> <span id="subtractionactivity" class="activityquestion"></span> <input type="button" value="Show answer"
+                                    id="subtractionshow"> <span id="subtractionanswer" class="activityanswer"></span></li>
+                            <hr>
+                            <li><span class="questiontitle">Division</span><br> <input type="button" value="Generate" id="questiondivisiongenerate"> <span id="divisionactivity" class="activityquestion"></span> <input type="button" value="Show answer" id="divisionshow">                                <span id="divisionanswer" class="activityanswer"></span> </li>
+                            <hr>
+                            <li><span class="questiontitle"></span> <input type="button" value="Generate all" id="generateall">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="block-center">
+                        <style>
+                            .ryanstutorials-binary-bottom {
+                                width: 320px;
+                                height: 50px;
+                            }
+                            
+                            @media(min-width: 500px) {
+                                .ryanstutorials-binary-bottom {
+                                    width: 468px;
+                                    height: 60px;
+                                }
+                            }
+                            
+                            @media(min-width: 750px) {
+                                .ryanstutorials-binary-bottom {
+                                    width: 728px;
+                                    height: 90px;
+                                }
+                            }
+                        </style>
+                        <script async="" src="introduction4.js"></script>
+                        <!-- RyansTutorials Binary Bottom -->
+                        <ins class="adsbygoogle ryanstutorials-binary-bottom" style="display:inline-block" data-ad-client="ca-pub-9971420945046594" data-ad-slot="9482633679"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+
+
+
+
+                    <hr>
+
+                </div>
+                <!-- <div class="col-md-3" id="sideboxcol">
+                <div class="well sidebar-nav hidden-xs hidden-sm affix-top" id="sidebox" data-spy="affix" data-offset-top="40" style="width: 263px;">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Navigation Menu</li>
+                        <li class=""><a href="#introduction">Introduction</a></li>
+                        <li class=""><a href="#addition">Binary Addition</a></li>
+                        <li class=""><a href="#multiplication">Binary Multiplication</a></li>
+                        <li class=""><a href="#subtraction">Binary Subtraction</a></li>
+                        <li class=""><a href="#division">Binary Division</a></li>
+
+                        <li class=""><a href="#activities">Activities</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid footer-background margin-top">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                <h4>THANK YOU FOR VISITING THIS WEBSITE</h4>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-20188827-12', 'ryanstutorials.net');
+        ga('send', 'pageview');
+    </script>
+
+    <!--<div id='rhythm'></div>-->
+
+    <!-- Bootstrap core JavaScript
+	================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="introduction5.js"></script>
+    <script src="introduction6.js"></script>
+    <script src="introduction.js"></script>
+
+
+
+
+
+
+    <iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html?origin=https%3A%2F%2Fryanstutorials.net" title="Twitter settings iframe" style="display: none;"></iframe>
+    <iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe>
+    <link rel="stylesheet" href="mycssfor_introduction.css">
+</body>
+
+</html>
